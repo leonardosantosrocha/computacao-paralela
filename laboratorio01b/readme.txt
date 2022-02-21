@@ -22,7 +22,7 @@
 // 03. Como executar os programas?
 // R: Após compilar, digite o comando ".\apelido_do_arquivo"  para executar o arquivo.
 //
-// 04. O meu programa funcionará no windows?
+// 04. O meu programa funcionará no Windows?
 // R: Para compilar e executar programas via terminal (cmd) no Windows é necessário ter o GCC instalado e configurado como uma variável de ambiente.
 //
 //
