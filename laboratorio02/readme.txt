@@ -38,25 +38,25 @@
 //
 // 02. Criação de processos filhos com FORK()
 // Entre com:
-// 	- Não há entrada de dados;
+//  - Não há entrada de dados;
 // Como comprovar o resultado: 
 //  - Após executar o programa, deverá aparecer a mensagem "I am process A and my X is 1" seguida por "I am process B and my X is 1", onde B é um número maior que A, além de X permanecer igual para ambos os processos.
 //
 // 03. Execução de processos com condicionais
 // Entre com:
-//	- Não há entrada de dados;
+//  - Não há entrada de dados;
 // Como comprovar o resultado: 
 //  - Após executar o programa, deverá aparecer a mensagem "I am parent A" seguida por "I am child B", onde B é um número maior que A, o "desvio no fluxo" causado pela validação "childpid == 0" deverá fazer com que o processo pai seja executado, seguido posteriormente pelo processo filho.
 //
 // 04. Execução de processos com desvio de fluxos
 // Entre com:
-//	- Não há entrada de dados;
+//  - Não há entrada de dados;
 // Como comprovar o resultado: 
 //  - Após executar o programa, deverá aparecer a mensagem "I am parent A, ID = A" seguida por "I am child B, ID = A", onde B é um número maior que A, onde podemos verificar que o processo pai faz referência a si próprio, enquanto o processo filho faz referência ao processo pai.
 //
 // 05. Execução de processos com laços de repetição
 // Entre com:
-// 	- Não há entrada de dados;
+//  - Não há entrada de dados;
 // Questões do slide:
 // 1) Rode o programa anterior para valores grandes de n. As mensagens sempre estarão ordenadas pelo valor de i?
 //  - Mesmo alterando o valor de "n" somente um texto foi apresentado ao usuário, entretanto, notamos que grandes valores atribuidos a "n" causam o uso de cem por cento do processador, muito provavelmente pela geração de vários processos.
@@ -67,8 +67,8 @@
 //
 // 06. Execução do cálculo fatorial utilizando processo pai e processo filho
 // Entre com:
-// 	- Um número inteiro positivo para o cálculo do fatorial no processo filho;
-//	- Um número inteiro positivo para o cálculo do fatorial no processo pai;
+//  - Um número inteiro positivo para o cálculo do fatorial no processo filho;
+//  - Um número inteiro positivo para o cálculo do fatorial no processo pai;
 // Como comprovar o resultado: 
 //  - Após executar o programa, deverá aparecer "Pid: A" e "Child: B" seguido por "Pid: A" e "Child: 0", posteriormente a execução do processo filho com a entrada do primeiro número para cálculo do fatorial, mostrará a mensagem "The factorial of X is X!" seguido por "I am child B, pid = A", a execução do processo pai com a entrada do segundo número para cálculo do fatorial, mostrará a mensagem "The factorial of Y is Y!" seguido por "I am parent A, pid = A".
 //
