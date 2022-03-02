@@ -32,7 +32,7 @@
 //
 // 01. Introdução aos conceitos de processo pai e processo filho
 // Entre com:
-// 	- Não há entrada de dados;
+//  - Não há entrada de dados;
 // Como comprovar o resultado: 
 //  - Após executar o programa, deverá aparecer a mensagem "I am process B" seguida por "My parent is A", onde B é um número maior que A.
 //
