@@ -14,7 +14,7 @@
 // Instruções para download, compilação e execução dos arquivos:
 //
 // 01. Como baixar os arquivos?
-// R: Todos os exercícios podem ser encontrados no endereço "https://github.com/leonardosantosrocha/computacao-paralela/tree/main/laboratorio01b", basta realizar o download.
+// R: Todos os exercícios podem ser encontrados no endereço "https://github.com/leonardosantosrocha/computacao-paralela/tree/main/laboratorio02", basta realizar o download.
 //
 // 02. Como compilar os programas?
 // R: Abra o terminal e digite o comando "gcc arquivo_a_compilar.c -o apelido_do_arquivo" para compilar o arquivo.
