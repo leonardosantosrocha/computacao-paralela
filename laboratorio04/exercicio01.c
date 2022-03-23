@@ -93,7 +93,7 @@ int main(void)
         {
           // Mensagem: segmento de memória excluído com sucesso
           printf("O segmento de memória compartilhada foi excluído!\n\n");
-          exit(1);
+          exit(0);
         }
       }
     }
