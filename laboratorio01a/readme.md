@@ -31,7 +31,7 @@ CC05D
 
 </br>
 
-## Descritivo dos programas:
+## Descritivo dos programas
 ### Exercício 01: Hello World
 > Entre com:</br>
 > Não há entrada de dados;</br>
