@@ -33,8 +33,7 @@ CC05D
 
 ## Descritivo dos programas
 ### Exercício 01: Hello World
-> Entre com:</br>
-> Não há entrada de dados;</br>
+> Entre com: não há entrada de dados.</br>
 > Como comprovar o resultado: o programa deverá escrever "Hello, world!" para o usuário.</br>
 
 </br>
