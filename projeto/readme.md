@@ -31,7 +31,7 @@ CC05D
 > - IdeOne: https://ideone.com;
 
 ### Como executar os programas localmente?
-> Após realizar a instalação do Python no seu computador através de uma das opções abaixo, basta executar o programa utilizando o interpretador da linguagem.</br>
+> Após realizar a instalação do Python no seu computador através de uma das opções abaixo, faça o download do arquivo disponível em "https://github.com/leonardosantosrocha/computacao-paralela/blob/main/projeto/taylor_v0.py" e realize a abertura do mesmo através do IDLE, possibilitando assim a execução e visualização dos resultados.</br>
 > - Instalação e execução de códigos Python no sistema operacional Windows: https://www.youtube.com/watch?v=pDBnCDuL-dc;</br>
 > - Instalação e execução de códigos Python no sistema operacional Linux: https://www.youtube.com/watch?v=rk8uMDAguZ4;
 
