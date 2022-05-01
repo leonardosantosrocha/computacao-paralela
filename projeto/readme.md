@@ -11,7 +11,11 @@ CC05D
 ## Overview
 
 ### Objetivo
-> O projeto tem por objetivo realizar a implementação da série de taylor em sua versão inicial e não paralelizada.
+> O projeto tem por objetivo realizar a implementação da Série de Taylor em sua versão inicial e não paralelizada.</br>
+### Diagrama de grafo acíclico
+> Por se tratar de um programa sequencial, para realizar o cálculo T(n) precisamos do cálculo prévio de T(n-i), onde "i" representa todos os números inteiros positivos e maiores que zero antecessores a "n".</br>
+> ![img](https://i.ibb.co/1bc3Mjm/imagem-2022-05-01-131501656.png)
+
 
 </br>
 
@@ -27,8 +31,9 @@ CC05D
 > - IdeOne: https://ideone.com;
 
 ### Como executar os programas localmente?
-> Instalação e execução de códigos Python no sistema operacional Windows: https://www.youtube.com/watch?v=pDBnCDuL-dc</br>
-> Instalação e execução de códigos Python no sistema operacional Linux: https://www.youtube.com/watch?v=rk8uMDAguZ4
+> Após realizar a instalação do Python no seu computador através de uma das opções abaixo, basta executar o programa utilizando o interpretador da linguagem.</br>
+> - Instalação e execução de códigos Python no sistema operacional Windows: https://www.youtube.com/watch?v=pDBnCDuL-dc;</br>
+> - Instalação e execução de códigos Python no sistema operacional Linux: https://www.youtube.com/watch?v=rk8uMDAguZ4;
 
 </br>
 
