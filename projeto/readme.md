@@ -36,7 +36,7 @@ CC05D
 
 ### Versão 01: Tartaruga
 > Entre com: não há entrada de dados.</br>
-> Como comprovar o resultado: após executar o programa para taylor(10), o programa deverá apresentar o resultado 2.9289684286.
+> Como comprovar o resultado: a função t(10) irá gerar T(n) = 2.9289682540 ou números com pequenas variações.
 
 </br>
 
