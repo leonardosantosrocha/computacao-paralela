@@ -1,6 +1,6 @@
 # UPM - Faculdade de Computação e Informática
 
-### Projeto - Taylor V0
+### Projeto - Tartaruga
 > Leonardo Santos da Rocha | 32092261</br>
 Vitor de Sousa Uema | 32028555</br>
 Talyta Scaramuzzo | 32079915</br>
@@ -11,48 +11,58 @@ CC05D
 ## Overview
 
 ### Objetivo
-> O projeto tem por objetivo realizar a implementação da Série de Taylor em sua versão inicial e não paralelizada.</br>
-### Diagrama de grafo acíclico
-> Por se tratar de um programa sequencial, para realizar o cálculo T(n) precisamos do cálculo prévio de T(n-i), onde "i" representa todos os números inteiros positivos e maiores que zero antecessores a "n".</br>
-> ![img](https://i.ibb.co/1bc3Mjm/imagem-2022-05-01-131501656.png)
-
+> O projeto tem por objetivo realizar a implementação do cálculo de T(n) = (1/1) + (1/2) + (1/3) + ... + (1/n).</br>
+> Trata-se de um desafio contínuo, logo as melhorias serão realizadas de forma incremental a fim de aumentar a perfomance do programa.</br>
 
 </br>
 
-## Instruções para download e execução dos programas
+## Instruções para download, compilação e execução dos programas
 
 ### Como baixar os arquivos?
 > Todos os exercícios podem ser encontrados no endereço "https://github.com/leonardosantosrocha/computacao-paralela/tree/main/projeto", basta realizar o download e centrazalizá-los em um único diretório.
 
-### Como executar os programas online?
-> Copie o código disponível em "https://github.com/leonardosantosrocha/computacao-paralela/blob/main/projeto/taylor_v0.py", selecione um dos compiladores listados abaixo e cole o código copiado anteriormente no campo de edição de texto, após isso basta executar.</br>
-> - Replit: https://replit.com/;</br> 
-> - JDoodle: https://www.jdoodle.com/python3-programming-online/;</br> 
-> - IdeOne: https://ideone.com;
+### Como compilar os programas?
+> Abra o terminal e digite o comando "gcc arquivo_a_compilar.c -o apelido_do_arquivo" para compilar o arquivo.
 
-### Como executar os programas localmente?
-> Após realizar a instalação do Python no seu computador através de uma das opções abaixo, faça o download do arquivo disponível em "https://github.com/leonardosantosrocha/computacao-paralela/blob/main/projeto/taylor_v0.py" e realize a abertura do mesmo através do IDLE, possibilitando assim a execução e visualização dos resultados.</br>
-> - Instalação e execução de códigos Python no sistema operacional Windows: https://www.youtube.com/watch?v=pDBnCDuL-dc;</br>
-> - Instalação e execução de códigos Python no sistema operacional Linux: https://www.youtube.com/watch?v=rk8uMDAguZ4;
+### Como executar os programas?
+> Após compilar, digite o comando "./apelido_do_arquivo" para executar o arquivo.
+
+### O meu programa funcionará no Windows?
+> Para compilar e executar programas via terminal (cmd) no Windows é necessário ter o GCC instalado e configurado como uma variável de ambiente.
 
 </br>
 
 ## Descritivo dos programas
-### Exercício 01: Série de Taylor V0
+
+### Versão 01: Tartaruga
 > Entre com: não há entrada de dados.</br>
-> Como comprovar o resultado: após executar o programa para T=10, o programa deverá apresentar o resultado 2.8289682539682537 ou algo próximo.
+> Como comprovar o resultado: após executar o programa para taylor(10), o programa deverá apresentar o resultado 2.9289684286.
 
 </br>
 
-## Resultados obtidos com a execução do programa
-|         T(n)        |    Segundos   |    Resultado   |
+## Diagramas de grafos acíclicos
+### Versão 01: Implementação sequencial
+> Por se tratar de um programa sequencial, para realizar o cálculo de T(n) precisamos calcular a soma de T(n-i), onde "n" representa o número final, enquanto "i" representa todos os inteiros positivos maiores que zero e anteriores a "n".</br>
+> ![img](https://i.ibb.co/q0GgmZy/img.png)
+
+</br>
+
+## Análise de performance
+
+### Versão 01: Resultados da execução do programa
+> Para realizar testes na V1 do projeto utilizamos "n" variando de 10^1 à 10^9, ao realizar o cálculo de 10^10 o tipo de dado utilizado apresentou overflow, logo precisaremos ajustar o tipo de dado na próxima versão do projeto.
+
+|         n           |    Segundos   |      T(n)      |
 | :------------------ | :------------ | :------------- |
-| 1000000             | 0.006001472   | 12.090113613   |
-| 10000000            | 0.05192852    | 14.39272572    |
-| 100000000           | 0.593459368   | 16.69531127    |
-| 1000000000          | 5.971246481   | 18.9978964     |
-| 10000000000         | 59.7614615    | 21.3004815     |
-| 100000000000        | 5434.650105   | 26.60306659    |
+| 10                  | 0.0000030000  | 02.9289682540  |
+| 100                 | 0.0000020000  | 05.1873775176  |
+| 1000                | 0.0000050000  | 07.4854708606  |
+| 10000               | 0.0000300000  | 09.7876060360  |
+| 100000              | 0.0002810000  | 12.0901461299  |
+| 1000000             | 0.0027540000  | 14.3927267229  |
+| 10000000            | 0.0526600000  | 16.6953113659  |
+| 100000000           | 0.2749890000  | 18.9978964139  |
+| 1000000000          | 2.7386450000  | 21.3004815023  |
 
 </br>
 
