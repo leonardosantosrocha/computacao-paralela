@@ -18,5 +18,5 @@ int main()
 {
     float t = taylor(10);
     printf("%.10f", t);
-    printf("\n");
+    printf("\n")
 }
