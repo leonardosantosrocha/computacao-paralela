@@ -21,8 +21,11 @@ CC05D
 ### Como baixar os arquivos?
 > Todos os exercícios podem ser encontrados no endereço "https://github.com/leonardosantosrocha/computacao-paralela/tree/main/projeto", basta realizar o download e centrazalizá-los em um único diretório.
 
-### Como compilar os programas?
+### V1: Como compilar os programas?
 > Abra o terminal e digite o comando "gcc arquivo_a_compilar.c -o apelido_do_arquivo" para compilar o arquivo.
+
+### V2: Como compilar os programas?
+> Abra o terminal e digite o comando "gcc arquivo_a_compilar.c -o apelido_do_arquivo -lpthread" para compilar o arquivo.
 
 ### Como executar os programas?
 > Após compilar, digite o comando "./apelido_do_arquivo" para executar o arquivo.
@@ -34,14 +37,18 @@ CC05D
 
 ## Descritivo dos programas
 
-### Versão 01: Tartaruga
+### V1: Tartaruga
 > Entre com: não há entrada de dados.</br>
 > Como comprovar o resultado: a função t(10) irá gerar T(n) = 2.9289682540 ou números com pequenas variações.
+
+### V2: Tartaruga
+> Entre com: não há entrada de dados.</br>
+> Como comprovar o resultado: a função t(1000) irá gerar T(n) = 7.4854708606 ou números com pequenas variações.
 
 </br>
 
 ## Diagramas de grafos acíclicos
-### Versão 01: Implementação sequencial
+### V1: Implementação sequencial
 > Por se tratar de um programa sequencial, para realizar o cálculo de T(n) precisamos calcular a soma de T(n-i), onde "n" representa o número final, enquanto "i" representa todos os inteiros positivos maiores que zero e anteriores a "n".</br>
 > ![img](https://i.ibb.co/q0GgmZy/img.png)
 
@@ -49,7 +56,7 @@ CC05D
 
 ## Análise de performance
 
-### Versão 01: Resultados da execução do programa
+### V1: Resultados da execução do programa
 > Para realizar testes na V1 do projeto utilizamos "n" variando de 10^1 à 10^9, ao realizar o cálculo de 10^10 o tipo de dado utilizado apresentou overflow, logo precisaremos ajustar o tipo de dado na próxima versão do projeto.
 
 |         n           |    Segundos   |      T(n)      |
@@ -64,6 +71,23 @@ CC05D
 | 100000000           | 0.2749890000  | 18.9978964139  |
 | 1000000000          | 2.7386450000  | 21.3004815023  |
 
+
+### V2: Resultados da execução do programa
+> Para realizar testes na V2 do projeto utilizamos "n" variando de 10^1 à 10^9, ao realizar cálculos para 10^6 e seus sucessores, notamos que houve uma perda de precisão significante em relação a versão inicial do projeto.
+
+|         n           |    Segundos   |      T(n)      |
+| :------------------ | :------------ | :------------- |
+| 10                  | 0.0000010000  | 02.9289682540  |
+| 100                 | 0.0000010000  | 05.1873775176  |
+| 1000                | 0.0000010000  | 07.4854708606  |
+| 10000               | 0.0000010000  | 09.7876060360  |
+| 100000              | 0.0000020000  | 11.6596762386  |
+| 1000000             | 0.0000025000  | 13.6237045016  |
+| 10000000            | 0.0000050000  | 15.4082039976  |
+| 100000000           | 0.0000150000  | 16.4041574309  |
+| 1000000000          | 0.0025000000  | 18.2043984609  |
+
 </br>
 
-##### 28/04/2022 - 05/05/2022
+##### V1: 28/04/2022 - 05/05/2022
+##### V2: 05/05/2022 - 09/05/2022
