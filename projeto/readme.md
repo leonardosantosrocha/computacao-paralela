@@ -47,10 +47,13 @@ CC05D
 
 </br>
 
-## Diagramas de grafos acíclicos
+## Diagramas de grafos acíclicos e speedup
 ### V1: Implementação sequencial
 > Por se tratar de um programa sequencial, para realizar o cálculo de T(n) precisamos calcular a soma de T(n-i), onde "n" representa o número final, enquanto "i" representa todos os inteiros positivos maiores que zero e anteriores a "n".</br>
 > ![img](https://i.ibb.co/q0GgmZy/img.png)
+
+### V2: Implementação com duas threads
+> Por se tratar de um programa no qual utilizamos duas threads, com a fórmula S = Tempo de Execução Sequencial / Tempo de Execução Paralelo, teremos S = 0.0000050000/0.0000010000 = 5.</br>
 
 </br>
 
