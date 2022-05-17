@@ -2,58 +2,31 @@
 #include <stdlib.h>
 #include <omp.h>
 
-#define t 100
+#define t 10000000
 
-// linha para debugar os valores dos laços for
-//printf("Hello from thread %d of %d\n", thread_id, thread_count);
-//printf("i = %d | div = %ld | rest = %ld | local_sum = %Lf\n", i, div, rest, local_sum)
+int thread_count = 2;
+long double global_sum = 0.0;
 
-void tartaruga(int thread_id, int thread_count, long double* global_sum)
+void tartaruga()
 {
-    int i = 0;
-    long int div = t / thread_count;
-    long int rest = t % thread_count;
-    long double local_sum = 0.0;
+	int thread_id = omp_get_thread_num();
+    long double i, min, max, local_sum = 0;
+	
+	min = 1 + (t / (thread_count)) * thread_id;
+	max = (t / (thread_count)) + (t / (thread_count)) * thread_id;
 
-    if (rest != 0)
-    {
-        # pragma omp parallel for num_threads(thread_count) reduction(+: local_sum)
-        for (i = 1.0 + thread_id * div; i <= div + thread_id * rest; i++)
-        {
-            local_sum = local_sum + (1 / ((long double) i));
-        }
-        if (thread_id == 0)
-        {
-            # pragma omp parallel for num_threads(thread_count) reduction(+: local_sum)
-            for (i = t - rest + 1; i <= t; i++)
-            {
-                local_sum = local_sum + (1 / ((long double) i));
-            }
-        }
-    }
-    else 
-    {
-        # pragma omp parallel for num_threads(thread_count) reduction(+: local_sum)
-        for (i = 1.0 + thread_id * div; i <= div + thread_id * rest; i++)
-        {
-            local_sum = local_sum + (1 / ((long double) i));
-        }
-    }
-
+	
+    for (i = min; i <= max ; i++) {
+		local_sum += (1 / i);
+        printf("%Lf %Lf\n", i, local_sum);
+	}
     #pragma omp critical
-    *global_sum += *global_sum + local_sum;
+    global_sum += global_sum + local_sum;
 }
-
 int main()
 {
-    int thread_id = omp_get_thread_num();
-    int thread_count = 2;
-    long double global_sum = 0.0;
-
     # pragma omp parallel num_threads(thread_count)
-    tartaruga(thread_id, thread_count, &global_sum);
-
+    tartaruga();
     printf("%Lf\n", global_sum);
-
 	return 0;
 }
