@@ -27,6 +27,9 @@ CC05D
 ### V2: Como compilar os programas?
 > Abra o terminal e digite o comando "gcc arquivo_a_compilar.c -o apelido_do_arquivo -lpthread" para compilar o arquivo.
 
+### V3: Como compilar os programas?
+> Abra o terminal e digite o comando "gcc -g -Wall -fopenmp -o main main.c" para compilar o arquivo.
+
 ### Como executar os programas?
 > Após compilar, digite o comando "./apelido_do_arquivo" para executar o arquivo.
 
@@ -45,6 +48,10 @@ CC05D
 > Entre com: não há entrada de dados.</br>
 > Como comprovar o resultado: a função t(1000) irá gerar T(n) = 7.4854708606 ou números com pequenas variações.
 
+### V3: Tartaruga
+> Entre com: não há entrada de dados.</br>
+> Como comprovar o resultado: a função t(100000) irá gerar T(n) = 12.0900480000 ou números com pequenas variações.
+
 </br>
 
 ## Diagramas de grafos acíclicos e speedup
@@ -52,8 +59,11 @@ CC05D
 > Por se tratar de um programa sequencial, para realizar o cálculo de T(n) precisamos calcular a soma de T(n-i), onde "n" representa o número final, enquanto "i" representa todos os inteiros positivos maiores que zero e anteriores a "n".</br>
 > ![img](https://i.ibb.co/q0GgmZy/img.png)
 
-### V2: Implementação com duas threads
+### V2: Implementação com pthreads utilizando duas threads
 > Por se tratar de um programa no qual utilizamos duas threads, com a fórmula S = Tempo de Execução Sequencial / Tempo de Execução Paralelo, teremos S = 0.0000050000/0.0000010000 = 5.</br>
+
+### V3: Implementação com openmp utilizando seis threads
+> Ao realizar testes de perfomance comparando o programa com e sem a diretiva "#pragma omp critical", não foram encontradas diferenças no speedup do programa, vale ressaltar que utilizamos valores menores de 10^10.
 
 </br>
 
@@ -90,7 +100,23 @@ CC05D
 | 100000000           | 0.0000150000  | 16.4041574309  |
 | 1000000000          | 0.0025000000  | 18.2043984609  |
 
+### V3: Resultados da execução do programa
+> Para realizar testes na V3 do projeto utilizamos "n" variando de 10^1 à 10^10, diferentemente da versão implementada com pthreads, não tivemos perda de precisão ao utilizar openmp, além de aumentar a performance do programa.
+
+|         n           |    Segundos   |      T(n)      |
+| :------------------ | :------------ | :------------- |
+| 10                  | 0.0000001000  | 02.0100135372  |
+| 100                 | 0.0000001000  | 05.0899770713  |
+| 1000                | 0.0000002000  | 07.4756768293  |
+| 10000               | 0.0000004000  | 09.7866260957  |
+| 100000              | 0.0000008000  | 12.0900481305  |
+| 1000000             | 0.0000016000  | 14.3927169229  |
+| 10000000            | 0.0000064000  | 16.6953103859  |
+| 100000000           | 0.0000127000  | 18.9978963159  |
+| 1000000000          | 0.0001240000  | 21.3004814925  |
+
 </br>
 
 ##### V1: 28/04/2022 - 05/05/2022
 ##### V2: 05/05/2022 - 09/05/2022
+##### V3: 09/05/2022 - 17/05/2022
