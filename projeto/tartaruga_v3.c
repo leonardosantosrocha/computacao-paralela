@@ -4,7 +4,7 @@
 
 int thread_count = 6;
 long double global_sum = 0.0;
-long double t = 100000000000;
+long double t = 10000000000000;
 
 long double tartaruga()
 {
@@ -32,6 +32,6 @@ int main()
 	#pragma omp critical
 	global_sum += local_sum;
 
-	printf("%Lf\n", global_sum);
+	printf("%.10Lf\n", global_sum);
 	return 0;
 }
